@@ -5,13 +5,13 @@ const hbs = require('hbs');
 const chalk = require('chalk');
 const dotenv = require('dotenv');
 
-const {weather, getTemperature} = require('./routes');
+const { weather } = require('./routes');
 
 // Load .env file and add it to process.env
 dotenv.config({ path: path.join(__dirname, '../config.env') });
 
 const app = express();
-const PORT = process.env.PORT || 4200;
+const PORT = process.env.PORT || 4000;
 
 // Define paths for Express Config
 const publicDirectoryPath = path.join(__dirname, '../public')
