@@ -1,0 +1,19 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+  gap: 4rem;
+  width: 100%;
+
+  &__title {
+    display: block;
+    grid-column: 1 / -1;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 500;
+    text-shadow: 0 0.5rem 1rem rgba(34, 34, 41, 0.2);
+    text-align: center;
+    line-height: 1;
+  }
+}

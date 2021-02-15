@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="css/reset-style.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/56a075a703.js" crossorigin="anonymous"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <img data-updating
+         class="header__bg-image"
+         src="assets/img/sunny.jpg" 
+         alt="weather bacground"
+         draggable="false">
+
+    <div class="header__wrapper">
+      {{>navbar}}
+      <div class="hero">
+        <h1 class="hero__title">{{heading}}</h1>
+
+        <section class="weather-info" data-updating>
+          <div class="weather-info__col">
+            <p class="weather-info__location"></p>
+            <span class="weather-info__temperature"></span>
+            <img src="assets/img/sunny-ico.png" 
+                 alt="Forecast image" 
+                 class="weather-info__image"
+                 draggable="false">
+            <p class="weather-info__desc"></p>
+          </div>
+
+          <div class="weather-info__col">
+            <span class="weather-info__day">SUN</span>
+            <i class="weather-info__icon fas fa-sun"></i>
+            <span class="weather-info__forecast">Clear</span>
+            <span class="weather-info__temperature weather-info__temperature-s">30&deg;</span>
+            <span class="weather-info__temperature weather-info__temperature-xs">26&deg;</span>
+          </div>
+          <div class="weather-info__col">
+            <span class="weather-info__day">MON</span>
+            <i class="weather-info__icon fas fa-cloud-sun"></i>
+            <span class="weather-info__forecast">Partly Cloudy</span>
+            <span class="weather-info__temperature weather-info__temperature-s">27&deg;</span>
+            <span class="weather-info__temperature weather-info__temperature-xs">25&deg;</span>
+          </div>
+          <div class="weather-info__col">
+            <span class="weather-info__day">TUE</span>
+            <i class="weather-info__icon fas fa-cloud-showers-heavy"></i>
+            <span class="weather-info__forecast">Heavy rain</span>
+            <span class="weather-info__temperature weather-info__temperature-s">22&deg;</span>
+            <span class="weather-info__temperature weather-info__temperature-xs">20&deg;</span>
+          </div>
+          <div class="weather-info__col">
+            <span class="weather-info__day">WED</span>
+            <i class="weather-info__icon fas fa-cloud-sun-rain"></i>
+            <span class="weather-info__forecast">Light Shower</span>
+            <span class="weather-info__temperature weather-info__temperature-s">25&deg;</span>
+            <span class="weather-info__temperature weather-info__temperature-xs">23&deg;</span>
+          </div>
+        </section>
+      </div>
+    </div>
+  </header>
+
+  {{!-- <div class="overlay">
+    <div class="search-form-wrap">
+      <form class="search-form" id="search-form">
+        <div class="search-form__group">
+          <input type="text" class="search-form__input" 
+            name="search-term" placeholder="Location or Latitude,Longitude">
+
+          <button class="search-form__submit-btn" type="submit" disabled>
+            <i class="material-icons">search</i>
+          </button>
+          <span class="search-form__spinner"></span>
+        </div>
+      </form>
+      <div class="error-message">
+        <p class="error-message__text">Unable to find any location</p>
+      </div>
+    </div>
+  </div> --}}
+</body>
+</html>

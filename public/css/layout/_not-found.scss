@@ -1,0 +1,21 @@
+.not-found-msg {
+  padding-top: 15rem;
+  color: #61574f;
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 200;
+  text-transform: capitalize;
+  user-select: none;
+}
+
+.not-found-followup-msg {
+  display: block;
+  width: fit-content;
+  margin: 3rem auto 0;
+  color: #333;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,86 @@
+.weather-info {
+  display: grid;
+  grid-template-columns: 10rem repeat(4, minmax(6.25rem, 1fr));
+  grid-column: 6 / 10;
+  justify-self: center;
+  margin-bottom: 10rem;
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-transform: capitalize;
+  text-shadow: 0 2px 1.6rem, rgba(34, 34, 41, 0.2);
+  transition: opacity .4s cubic-bezier(0, 0.55, 0.45, 1);
+
+  &[data-updating] {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__col {
+    position: relative;
+    
+    &:not(:first-child) {
+      display: grid;
+      grid-template-rows: repeat(5, 1fr);
+      justify-items: center;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 60%;
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+
+  &__location {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  &__image {
+    display: block;
+    max-width: 10rem;
+    max-height: 10rem;
+    margin-bottom: 1rem;
+    user-select: none;
+  }
+
+  &__day {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  &__forecast {
+    font-weight: 300;
+    text-align: center;
+  }
+
+  &__temperature {
+    font-size: 2rem;
+    font-weight: 600;
+
+    &-s {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    &-xs {
+      font-size: .85rem;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+  }
+
+  &__icon {
+    font-size: 1.5rem;      
+  }
+}

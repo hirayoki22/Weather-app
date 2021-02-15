@@ -1,0 +1,13 @@
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  &[modal-active] {
+    overflow: hidden;
+  }  
+  
+  ::selection {
+    background-color: rgba(193, 208, 241, 0.63);
+  }
+}
