@@ -62,7 +62,7 @@ const getWeather = (query, unit = 'm') => {
   // Un force that has to change...
   weatherBox.setAttribute('data-updating', '');
 
-  fetch(`http://127.0.0.1:4000/weather?address=${encodeURI(query)}&unit=${unit}`)
+  fetch(`/weather?address=${encodeURI(query)}&unit=${unit}`)
     .then(res => res.json())
     .then(res => {
       res.error 
@@ -70,7 +70,6 @@ const getWeather = (query, unit = 'm') => {
         : updateWeatherInfo(res);
     })
     .catch(e => console.log('ERROR: ', e.message))
-    // .finally(closeSearchForm);
 }
 
 // Show the Search Form
